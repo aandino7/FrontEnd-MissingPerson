@@ -1,0 +1,38 @@
+.div2 { 
+color: white;
+font-weight: 400;
+font-size: medium; 
+margin-top: 20px;
+width: 60%;   
+height: 80%;
+border: 7px solid #111827;  
+background-color: #111827; 
+border-radius: 20px;
+padding: 40px;
+position: absolute;
+right: 300px;
+}
+
+.txt1 {
+position: absolute;
+right: 650px;
+bottom: 500px;
+}
+
+.txt2 {
+position: absolute;
+right: 150px;
+bottom: 500px;
+}
+
+.txt3 {
+position: absolute;
+right: 450px;
+bottom: 50px;
+}
+
+.txt4 {
+position: absolute;
+right: 455px;
+bottom: 30px;
+}

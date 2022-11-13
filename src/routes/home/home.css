@@ -1,0 +1,188 @@
+.bg{
+position: absolute;
+right: 800px;
+top: 200px;
+width: 700px; 
+height: 380px;
+border: 15px solid transparent;
+border-color:  #111827;
+transition: transform .9s;
+}
+
+.bg:hover{
+transform: scale(1.05);
+}
+
+body{
+margin:0;
+padding:0;
+font-family:"arial",heletica,sans-serif;
+font-size:12px;
+background: #111865 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+-webkit-animation: 10s linear 0s normal none infinite animate;
+-moz-animation: 10s linear 0s normal none infinite animate;
+-ms-animation: 10s linear 0s normal none infinite animate;
+-o-animation: 10s linear 0s normal none infinite animate;
+animation: 10s linear 0s normal none infinite animate;
+}
+ 
+@-webkit-keyframes animate {
+from {background-position:0 0;}
+to {background-position: 500px 0;}
+}
+
+@-moz-keyframes animate {
+from {background-position:0 0;}
+to {background-position: 500px 0;}
+}
+
+@-ms-keyframes animate {
+from {background-position:0 0;}
+to {background-position: 500px 0;}
+}
+
+@-o-keyframes animate {
+from {background-position:0 0;}
+to {background-position: 500px 0;}
+}
+
+@keyframes animate {
+from {background-position:0 0;}
+to {background-position: 500px 0;}
+}
+
+.wrapper{
+position: fixed;
+top: 93%;
+left: 63%;
+padding: 2%;
+transform: translate(-50%, -50%);
+}
+
+.wrapper2{
+position: fixed;
+top: 50%;
+left: 170%;
+transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+position: relative;
+}
+
+.link_wrapper2{
+position: relative;
+}
+
+a{
+display: block;
+width: 250px;
+height: 50px;
+line-height: 50px;
+font-weight: bold;
+text-decoration: none;
+background: #333;
+text-align: center;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: 1px;
+border: 3px solid #333;
+transition: all .35s;
+}
+
+.icon{
+width: 50px;
+height: 50px;
+border: 3px solid transparent;
+position: absolute;
+transform: rotate(45deg);
+right: 0;
+top: 0;
+z-index: -1;
+transition: all .35s;
+}
+
+.icon svg{
+width: 30px;
+position: absolute;
+top: calc(50% - 15px);
+left: calc(50% - 15px);
+transform: rotate(-45deg);
+fill: #1d4ed8;
+transition: all .35s;
+}
+
+a:hover{
+width: 200px;
+border: 3px solid #1d4ed8;
+border-radius: 5px;
+background: #111827;
+color: white;
+}
+
+a:hover + .icon{
+border: 3px solid #1d4ed8;
+right: -25%;
+}
+
+.p1{
+color: #fff;
+font-size: 40px;
+margin-inline:-300px;
+position: absolute;
+right: 370px;
+bottom: 525px;
+}
+
+.h1{
+background-color: transparent;
+border-color: transparent;
+}
+
+.h1:hover{
+background-color: transparent;
+border-color: transparent;
+}
+
+.div3{
+color: white;
+font-weight: 400;
+font-size: medium; 
+border: 7px solid #111827;  
+background-color: #111827; 
+border-radius: 20px;
+width: 37%;   
+height: 52%;
+position: absolute;
+left: 57%;
+bottom: 135px;
+}
+
+.text{
+color: #fff;
+font-size: 20px;
+margin-inline: 30px;
+width: 500px;
+position: absolute;
+right: -4px;
+bottom: 185px;
+text-align: justify;
+}
+
+.p2{
+color: #fff;
+font-size: 35px;
+margin-inline:-300px;
+position: absolute;
+right: 333px;
+bottom: 10px;
+}
+
+.p3{
+color: #fff;
+font-size: 15px;
+margin-inline:-320px;
+position: absolute;
+right: 1080px;
+bottom: -100px;
+}
