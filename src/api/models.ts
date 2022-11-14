@@ -7,4 +7,5 @@ export interface Image {
 export interface FoundResult {
   result: boolean;
   matches: string[];
+  images: string[];
 }
