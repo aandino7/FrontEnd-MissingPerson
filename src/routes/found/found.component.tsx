@@ -24,7 +24,7 @@ const Found = () => {
           "Content-Type": "multipart/form-data",
         },
       })
-      .then(res => {
+      .then((res) => {
         setFoundResult(res.data);
         alert(
           res.data.result ? "Hubo coincidencias!" : "No hubo coincidencias..."
@@ -34,17 +34,18 @@ const Found = () => {
 
   return (
     <div>
-      <div>
-        <label>Sube tu vaina</label>
-        <input type="file" onChange={e => fileHandler(e)} />
-        <button onClick={() => recognize()}>Probar</button>
+      <div className="div2">
+        <label className="p5">FOUND A PERSON BY SELECTING AN IMAGE</label>
+        <br></br>
+        <input className="file1" type="file" onChange={(e) => fileHandler(e)} />
+        <button className="button btn1" onClick={() => recognize()}>
+          TEST
+        </button>
+        <p className="p7">RESULT</p>
+        <img className="img" src={foundResult.matches[0]} alt="result" />
+        <h1 className="p6">IS THIS YOUT MATCH?</h1>
+        <button className="button btn2">CONFIRM</button>
       </div>
-      <div>
-        <p>La foto que salio</p>
-        <img src={foundResult.matches[0]} alt="result" />
-      </div>
-      <h1>E velda?</h1>
-      <button>Confirma</button>
     </div>
   );
 };
