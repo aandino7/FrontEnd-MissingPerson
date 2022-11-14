@@ -1,38 +1,52 @@
+import { useState } from "react";
 import "./found.css";
+import axios from "axios";
+import { FoundResult } from "../../api/models";
 
 const Found = () => {
-return <div> 
+  const [file, setFile] = useState("");
+  const [foundResult, setFoundResult] = useState({
+    matches: ["x"],
+    result: false,
+  });
 
-<div className="div2">
+  const fileHandler = (e: any) => {
+    let file = e.target.files[0];
+    setFile(file);
+  };
 
-<label className="txt1">
-Image Uploaded
-</label>
+  const recognize = () => {
+    const formData = new FormData();
+    formData.append("person_picture", file);
+    axios
+      .post<FoundResult>("http://127.0.0.1:8000/recon-by-file", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then(res => {
+        setFoundResult(res.data);
+        alert(
+          res.data.result ? "Hubo coincidencias!" : "No hubo coincidencias..."
+        );
+      });
+  };
 
-<label className="txt2">
-Image Found With Similarities
-</label>
-
-<label className="txt3">
-Match
-</label>
-
-<label className="txt4">
-TEXT
-</label>
-
-</div>
-
-<div>
-<img src="face1.png" alt="" className="f1"/>
-</div>
-
-<div>
-<img src="face2.png" alt="" className="f2"/>
-</div>
-
-</div>
-    
+  return (
+    <div>
+      <div>
+        <label>Sube tu vaina</label>
+        <input type="file" onChange={e => fileHandler(e)} />
+        <button onClick={() => recognize()}>Probar</button>
+      </div>
+      <div>
+        <p>La foto que salio</p>
+        <img src={foundResult.matches[0]} alt="result" />
+      </div>
+      <h1>E velda?</h1>
+      <button>Confirma</button>
+    </div>
+  );
 };
 
 export default Found;

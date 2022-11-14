@@ -5,7 +5,7 @@ import { Image } from "../../api/models";
 import ImageFrame from "../../Components/ImageFrame/imageframe.component";
 
 const Missing = () => {
-const [images, setImages] = useState<Image[]>([] as Image[]);
+  const [images, setImages] = useState<Image[]>([] as Image[]);
 
   const getImages = () => {
     axios.get("http://127.0.0.1:8000/get-images").then(res => {
@@ -16,12 +16,12 @@ const [images, setImages] = useState<Image[]>([] as Image[]);
   useEffect(() => {
     getImages();
   }, []);
-  return (
-<div>
-<ImageFrame images={images}></ImageFrame>
-</div>
 
-);
+  return (
+    <div>
+      <ImageFrame images={images}></ImageFrame>
+    </div>
+  );
 };
 
 export default Missing;
