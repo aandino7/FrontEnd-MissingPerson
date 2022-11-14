@@ -21,7 +21,7 @@ const ImageFrame = ({
     <div className="frame1">
       <ImageList sx={{ width: width, height: height }}>
         <ImageListItem key="Subheader" cols={cols}></ImageListItem>
-        {images.map(item => (
+        {images.map((item) => (
           <ImageListItem key={item.fileName}>
             <img
               src={item.imagePath}
@@ -29,7 +29,7 @@ const ImageFrame = ({
               alt={item.fileName}
               loading="lazy"
             />
-            <ImageListItemBar title={item.fileName} />
+            <ImageListItemBar title={item.personName} />
           </ImageListItem>
         ))}
       </ImageList>

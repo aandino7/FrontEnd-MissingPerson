@@ -8,7 +8,7 @@ const Missing = () => {
   const [images, setImages] = useState<Image[]>([] as Image[]);
 
   const getImages = () => {
-    axios.get("http://127.0.0.1:8000/get-images").then(res => {
+    axios.get("http://127.0.0.1:8000/get-images").then((res) => {
       setImages(res.data);
     });
   };

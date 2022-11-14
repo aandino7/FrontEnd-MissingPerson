@@ -88,7 +88,7 @@ button:focus::after {
   font-size: 40px;
   margin-inline: -300px;
   position: absolute;
-  right: 340px;
+  right: 355px;
   bottom: 480px;
 }
 
@@ -113,12 +113,21 @@ button:focus::after {
   bottom: 20px;
 }
 
+.p9 {
+  color: rgb(65, 207, 65);
+  font-size: 12px;
+  margin-inline: -300px;
+  position: absolute;
+  right: 312px;
+  bottom: 230px;
+}
+
 .img {
   max-width: 200px;
   max-height: 280px;
   position: absolute;
-  right: 430px;
-  bottom: 270px;
+  right: 350px;
+  bottom: 130px;
 }
 
 .file1 {
@@ -132,6 +141,6 @@ button:focus::after {
   font-size: 20px;
   margin-inline: -300px;
   position: absolute;
-  right: 330px;
+  right: 340px;
   bottom: 260px;
 }

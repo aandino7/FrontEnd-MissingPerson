@@ -27,7 +27,7 @@ const Found = () => {
           "Content-Type": "multipart/form-data",
         },
       })
-      .then(res => {
+      .then((res) => {
         if (!res.data.result) {
           alert("No results matching that image...");
           window.location.reload();
@@ -50,15 +50,17 @@ const Found = () => {
   return (
     <div>
       <div className="div2">
-        <label className="p5">FOUND A PERSON BY SELECTING AN IMAGE</label>
+        <label className="p5">FIND A PERSON BY SELECTING AN IMAGE</label>
         <br></br>
-        <input className="file1" type="file" onChange={e => fileHandler(e)} />
+        <input className="file1" type="file" onChange={(e) => fileHandler(e)} />
         <button className="button btn1" onClick={() => recognize()}>
           TEST
         </button>
         <p className="p7">RESULT</p>
-        <img className="img" src={foundResult.matches[0]} alt="result" />
-        {foundResult.result && <span>We found a match!</span>}
+        {foundResult.result && (
+          <img className="img" src={foundResult.matches[0]} alt="result" />
+        )}
+        {foundResult.result && <span className="p9">WE FOUND A MATCH!</span>}
         {foundResult.result && (
           <div>
             <h1 className="p6">IS THIS YOUT MATCH?</h1>
